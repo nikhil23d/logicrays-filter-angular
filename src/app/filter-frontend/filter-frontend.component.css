@@ -1,0 +1,258 @@
+.nav-tabs {
+  /* border-bottom: 1px solid #dee2e6 ; */
+  background-color: #efefef !important;
+}
+
+.nav-tabs .nav-link {
+  color: #000 !important;
+  font-weight: 500;
+}
+.container {
+  max-width: 100%;
+}
+.box1 {
+  width: 100%;
+  height: 100px;
+  background: #fff;
+  margin: 40px auto;
+}
+
+.box {
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+.logo-box {
+  min-height: 100px;
+  width: 100vw;
+  margin: 224% auto;
+  background: white;
+  border-radius: 5px;
+  /* right: 13%; */
+  /* padding: 0px 2px 4px 100px; */
+  /* float: left; */
+  margin-top: 2%;
+}
+
+div.shadow {
+  position: absolute;
+  max-width: 45%;
+  max-height: 45%;
+  top: 50%;
+  left: 50%;
+  overflow: visible;
+}
+
+div.box2 {
+  position: absolute;
+  max-width: 100%;
+  max-height: 500vh;
+  top: 100%;
+  left: 0%;
+}
+
+div.shadow1 {
+  position: absolute;
+  max-width: 45%;
+  max-height: 45%;
+  top: 100%;
+  left: 50%;
+  overflow: visible;
+}
+.logo-img {
+  position: relative;
+  max-width: 100%;
+  max-height: 100%;
+  margin-top: -19%;
+  margin-left: -50%;
+}
+
+.navbar-brand {
+  transform: translateX(-50%);
+  left: 50%;
+  position: absolute;
+}
+
+#exTab2 h3 {
+  color: white;
+  background-color: #428bca;
+  padding: 5px 15px;
+}
+
+.tab-container {
+  /* position: relative;
+    padding-top: 2em; */
+  margin-top: 2%;
+}
+.row {
+  padding: 10px !important;
+}
+
+.card-img {
+  /* height: 71%; */
+  width: 94%;
+}
+
+.card-body {
+  padding: 0.25rem !important;
+}
+
+.top-mg {
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.form-select {
+  width: 78%;
+  border: none;
+  margin-top: 11px;
+  margin-left: 30px;
+  color: #d9534f;
+  font-weight: 500;
+}
+
+/* .selected-down{
+    color: #d9534f;
+  } */
+
+.dropdown {
+  /* border: 2px solid #efefef;
+    border-radius: 2px; */
+
+  border: 2px solid #efefef;
+  border-radius: 8px;
+  margin-left: 12px;
+  margin-right: 13px;
+  /* margin-top: -5px; */
+  /* height: 47px; */
+}
+
+.share-btn {
+  margin-left: 31% !important;
+}
+.ht-share {
+  height: 129px;
+  width: 79px;
+}
+
+.material-icons {
+  margin-top: 30px;
+}
+
+.custom-row {
+  padding: 0px !important;
+}
+
+.card-title {
+  margin-top: 27px !important;
+}
+
+/* media query */
+
+@media screen and (max-width: 933px) {
+  .tab-container {
+    margin-top: 50%;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .tab-container {
+    margin-top: 52%;
+  }
+  /* .share-btn{
+        margin-left: 31% !important;
+      } */
+}
+
+@media screen and (max-width: 780px) {
+  .tab-container {
+    margin-top: 60%;
+  }
+  .share-btn {
+    margin-left: 31% !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .tab-container {
+    margin-top: 20%;
+  }
+
+  .share-btn {
+    margin-left: 31% !important;
+  }
+}
+
+@media screen and (max-width: 699px) {
+  .tab-container {
+    margin-top: 65%;
+  }
+  .share-btn {
+    margin-left: 28% !important;
+  }
+}
+
+@media screen and (max-width: 635px) {
+  .tab-container {
+    margin-top: 74%;
+  }
+  .share-btn {
+    margin-left: 24% !important;
+  }
+}
+
+@media screen and (max-width: 549px) {
+  .tab-container {
+    margin-top: 86%;
+  }
+  .share-btn {
+    margin-left: 20% !important;
+  }
+}
+
+@media screen and (max-width: 535px) {
+  .tab-container {
+    margin-top: 116%;
+  }
+  .share-btn {
+    margin-left: 18% !important;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .tab-container {
+    margin-top: 126%;
+  }
+  .share-btn {
+    margin-left: 15% !important;
+  }
+}
+
+@media screen and (max-width: 444px) {
+  .tab-container {
+    margin-top: 142%;
+  }
+  .share-btn {
+    margin-left: 13% !important;
+  }
+}
+
+@media screen and (max-width: 403px) {
+  .tab-container {
+    margin-top: 142%;
+  }
+  .share-btn {
+    margin-left: 10% !important;
+  }
+}
+
+@media screen and (max-width: 397px) {
+  .tab-container {
+    margin-top: 159%;
+  }
+  .share-btn {
+    margin-left: 8% !important;
+  }
+}
