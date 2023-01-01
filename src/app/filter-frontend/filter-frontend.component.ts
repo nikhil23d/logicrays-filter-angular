@@ -19,7 +19,49 @@ export class FilterFrontendComponent implements OnInit {
   PracticeSelected: Number;
   listVideo: Video[];
   VideoSelected: Number;
+  isLoading = true;
+
+  
+
+  // toggleLoading = () => {
+  //   this.isLoading = true;
+    
+  // };
+
+
+
+
   ngOnInit() {
+
+   
+
+   
+  }
+
+  // onVideoSelected(selectedVideoId: any): void {
+  //   this._freeApiService
+  //     .getCardBySelectTopics(selectedVideoId)
+  //     .subscribe((data) => {
+  //       this.listVideo = data.results;
+  //       console.log("Video data --->>", this.listVideo);
+  //     });
+  // }
+
+
+  reloadePage(){
+    window.location.reload();
+  }
+
+
+  spinnerPage(){
+     setTimeout(() => {
+      this.isLoading = false
+    }, 6000);
+
+  }
+
+  searchFilterData(){
+   
     this._freeApiService.getPlaylist().subscribe((data) => {
       // console.log(data);
       this.listPlaylist = data.results;
@@ -32,22 +74,15 @@ export class FilterFrontendComponent implements OnInit {
       console.log("Practice data --->>", this.listPractice);
     });
 
-    // this._freeApiService.getVideo()
-    // .subscribe (
-    //   data => {
-    //     // console.log(data);
-    //     this.listVideo = data.results;
-    //     console.log("Video data --->>", this.listVideo);
-    //   }
-    // )
-  }
-
-  onVideoSelected(selectedVideoId: any): void {
-    this._freeApiService
-      .getCardBySelectTopics(selectedVideoId)
-      .subscribe((data) => {
+    this._freeApiService.getVideo()
+    .subscribe (
+      data => {
+        // console.log(data);
         this.listVideo = data.results;
         console.log("Video data --->>", this.listVideo);
-      });
+      }
+    )
+  
+
   }
 }

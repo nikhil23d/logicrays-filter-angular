@@ -79,6 +79,7 @@
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
         Search
       </button>
+      
     </form>
   </div>
 </nav>
@@ -108,35 +109,35 @@
             <strong> Language </strong>
             <select class="form-select" aria-label="Default select example">
               <option selected>Select Language</option>
-              <option value="1">Hindi</option>
-              <option value="2">English</option>
-              <option value="3">Marathi</option>
+              <option value="Hindi">Hindi</option>
+              <option value="English">English</option>
+              <option value="Marathi">Marathi</option>
             </select>
           </p>
         </div>
-        <br />
+        <p></p>
 
         <div class="dropdown">
           <p class="top-mg">
             <strong> Boards </strong>
             <select class="form-select" aria-label="Default select example">
               <option selected>Select Boards</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
+              <option value="1">1</option>
+              <option value="2">3</option>
+              <option value="3">3</option>
             </select>
           </p>
         </div>
 
-        <br />
+        <p></p>
 
         <div class="dropdown">
           <p class="top-mg">
             <strong> Subject </strong>
             <select class="form-select" aria-label="Default select example">
               <option selected>Select Subject</option>
-              <option value="1">Maths</option>
-              <option value="2">Science</option>
+              <option value="Maths">Maths</option>
+              <option value="Science">Science</option>
               <!-- <option value="3">Three</option>s -->
             </select>
           </p>
@@ -149,53 +150,75 @@
             <strong> Class </strong>
             <select class="form-select" aria-label="Default select example">
               <option selected>Select Class</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
             </select>
           </p>
         </div>
 
-        <br />
+        <p></p>
 
         <div class="dropdown">
           <p class="top-mg">
             <strong> Chapter </strong>
+            <!--  [(ngModel)]="VideoSelected" -->
             <select
-              [(ngModel)]="VideoSelected"
-              (ngModelChange)="onVideoSelected($event)"
+             
               class="form-select"
               aria-label="Default select example"
             >
               <option selected>Select Chapter</option>
-              <option *ngFor="let item of listVideo" [value]="item.id">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+
+              <!-- <option *ngFor="let item of listVideo">
                 {{ item.chapter_name_english }}
-              </option>
+              </option> -->
             </select>
           </p>
         </div>
 
-        <br />
+     <p></p>
 
         <!-- [(ngModel)]="PlaylistSelected" -->
 
         <div class="dropdown">
           <p class="top-mg">
             <strong> Topic </strong>
+            <!--  [(ngModel)]="PracticeSelected" -->
             <select
-              [(ngModel)]="PracticeSelected"
+             
               class="form-select"
               aria-label="Default select example"
             >
               <option selected>Select Topic</option>
-              <option *ngFor="let item of listPractice">
-                {{ item.video_topic_name }}{{ item.id }}
-              </option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <!-- <option *ngFor="let item of listPractice">
+                {{ item.video_topic_name }}
+              </option> -->
             </select>
           </p>
         </div>
         <!-- {{PracticeSelected}} -->
-        <br />
+     <hr>
 
         <div class="row">
           <div class="col-sm-12 text-center">
@@ -203,7 +226,7 @@
               id="btnSearch"
               class="btn btn-danger btn-md center-block"
               Style="width: 40%; margin-right: 4px;"
-              OnClick="btnSearch_Click"
+              (click)="reloadePage()"
             >
               Reset
             </button>
@@ -211,7 +234,8 @@
               id="btnClear"
               class="btn btn-danger btn-md center-block"
               Style="width: 40%;"
-              OnClick="btnClear_Click"
+              (click)="searchFilterData(); spinnerPage()"
+           
             >
               Search
             </button>
@@ -284,6 +308,10 @@
           role="tabpanel"
           aria-labelledby="playlist-tab"
         >
+       
+          <img *ngIf="isLoading" style="    width: 137px;
+          margin-left: 40%;" src="/assets/img/Spin-1s-200px.gif" alt="Loading...">
+      
           <div class="card" *ngFor="let item of listPlaylist">
             <div class="row custom-row no-gutters">
               <div class="col-sm-2" style="margin-top: auto">
